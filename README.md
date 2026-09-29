@@ -98,7 +98,7 @@ CCF aims to:
 
 ## 5. Author
 
-**Erik De La Rosa**  
+**Erik De La Rosa Sr**  
 Independent Researcher — Arlington, TX
 
 ---
