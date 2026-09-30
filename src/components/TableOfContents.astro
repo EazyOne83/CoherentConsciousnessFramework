@@ -1,0 +1,43 @@
+---
+export interface Props {
+  headings: { depth: number; slug: string; text: string }[];
+}
+const { headings } = Astro.props;
+const filtered = headings.filter((h) => h.depth === 2 || h.depth === 3);
+---
+
+{filtered.length > 0 && (
+  <nav class="toc" aria-label="Table of contents">
+    <p class="toc-label">On this page</p>
+    <ul class="toc-list">
+      {filtered.map((h) => (
+        <li class:list={['toc-item', { 'toc-h3': h.depth === 3 }]}>
+          <a href={`#${h.slug}`} class="toc-link">{h.text}</a>
+        </li>
+      ))}
+    </ul>
+  </nav>
+)}
+
+<style>
+  .toc { position: sticky; top: calc(var(--header-height) + 2rem); }
+  .toc-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    margin-bottom: 0.75rem;
+  }
+  .toc-list { list-style: none; padding: 0; margin: 0; }
+  .toc-item { margin-bottom: 0.3rem; }
+  .toc-h3 { padding-left: 0.75rem; }
+  .toc-link {
+    font-size: 0.8rem;
+    color: var(--color-muted);
+    text-decoration: none;
+    transition: color 0.15s;
+    line-height: 1.5;
+  }
+  .toc-link:hover { color: var(--color-accent); text-decoration: none; }
+</style>

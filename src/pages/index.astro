@@ -1,0 +1,206 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="A framework for understanding coherent consciousness in complex systems." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <title>Coherent Consciousness Framework — Coherent Systems Research Institute</title>
+  </head>
+  <body>
+    <Header />
+
+    <main class="hero-section">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="hero-content">
+        <p class="hero-eyebrow">coherentsystems.institute</p>
+        <h1 class="hero-title">
+          Coherent<br />
+          <span class="hero-accent">Consciousness</span><br />
+          Framework
+        </h1>
+        <p class="hero-description">
+          A rigorous, systems-informed framework for understanding how coherence
+          emerges in conscious, complex, and organizational systems.
+        </p>
+        <div class="hero-actions">
+          <a href="/docs/introduction" class="btn-primary">Get Started →</a>
+          <a href="/docs/framework/overview" class="btn-ghost">View Framework</a>
+        </div>
+      </div>
+
+      <div class="hero-diagram" aria-hidden="true">
+        <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="160" cy="160" r="140" stroke="#1f2d47" stroke-width="1"/>
+          <circle cx="160" cy="160" r="100" stroke="#1f2d47" stroke-width="1" stroke-dasharray="4 3"/>
+          <circle cx="160" cy="160" r="60" stroke="#38bdf8" stroke-width="1.5" stroke-dasharray="4 3" opacity="0.5"/>
+          <circle cx="160" cy="160" r="20" fill="#38bdf8" opacity="0.15"/>
+          <circle cx="160" cy="160" r="8" fill="#38bdf8"/>
+          <!-- Orbital nodes -->
+          <circle cx="160" cy="60" r="6" fill="#7dd3fc" opacity="0.9"/>
+          <circle cx="248" cy="212" r="6" fill="#7dd3fc" opacity="0.7"/>
+          <circle cx="72" cy="212" r="6" fill="#7dd3fc" opacity="0.7"/>
+          <!-- Connection lines -->
+          <line x1="160" y1="160" x2="160" y2="66" stroke="#38bdf8" stroke-width="0.8" opacity="0.4"/>
+          <line x1="160" y1="160" x2="243" y2="208" stroke="#38bdf8" stroke-width="0.8" opacity="0.4"/>
+          <line x1="160" y1="160" x2="77" y2="208" stroke="#38bdf8" stroke-width="0.8" opacity="0.4"/>
+        </svg>
+      </div>
+    </main>
+
+    <section class="features-section">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">◈</div>
+          <h3>Systems-Grounded</h3>
+          <p>Built on rigorous systems theory, cybernetics, and complexity science — not metaphor.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⬡</div>
+          <h3>Layered Architecture</h3>
+          <p>A multi-scale model mapping how coherence propagates across individual, collective, and institutional levels.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⟳</div>
+          <h3>Actionable</h3>
+          <p>Practical applications for organizational design, knowledge systems, and collective decision-making.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">MDX</div>
+          <h3>Open & Extensible</h3>
+          <p>Written in MDX — every doc is a living component. Fork, extend, and integrate into your own systems.</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
+
+<style>
+  body { overflow-x: hidden; }
+
+  .hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+    min-height: 100vh;
+    padding: 8rem 6rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(56,189,248,0.06) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .hero-content { max-width: 520px; position: relative; z-index: 1; }
+
+  .hero-eyebrow {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    margin-bottom: 1rem;
+  }
+
+  .hero-title {
+    font-size: clamp(2.8rem, 5vw, 4rem);
+    font-weight: 800;
+    line-height: 1.1;
+    color: var(--color-heading);
+    margin: 0 0 1.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-accent { color: var(--color-accent); }
+
+  .hero-description {
+    font-size: 1.1rem;
+    color: var(--color-muted);
+    line-height: 1.7;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--color-accent);
+    color: #0a0e1a;
+    font-weight: 700;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: background 0.2s, transform 0.1s;
+    font-size: 0.95rem;
+  }
+  .btn-primary:hover { background: #7dd3fc; transform: translateY(-1px); text-decoration: none; color: #0a0e1a; }
+
+  .btn-ghost {
+    display: inline-block;
+    border: 1px solid var(--color-border);
+    color: var(--color-text);
+    font-weight: 500;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--radius);
+    text-decoration: none;
+    transition: border-color 0.2s, color 0.2s;
+    font-size: 0.95rem;
+  }
+  .btn-ghost:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
+
+  .hero-diagram { width: 320px; flex-shrink: 0; opacity: 0.8; }
+
+  .features-section {
+    padding: 4rem 6rem 6rem;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .feature-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    transition: border-color 0.2s;
+  }
+  .feature-card:hover { border-color: var(--color-accent-dim); }
+
+  .feature-icon {
+    font-size: 1.4rem;
+    color: var(--color-accent);
+    margin-bottom: 0.75rem;
+    font-family: var(--font-mono);
+  }
+
+  .feature-card h3 { font-size: 1rem; margin-top: 0; margin-bottom: 0.5rem; }
+  .feature-card p { font-size: 0.875rem; color: var(--color-muted); margin: 0; }
+
+  @media (max-width: 900px) {
+    .hero-section { flex-direction: column; padding: 6rem 2rem 3rem; text-align: center; }
+    .hero-actions { justify-content: center; }
+    .hero-diagram { width: 220px; }
+    .features-section { padding: 3rem 2rem; }
+  }
+</style>

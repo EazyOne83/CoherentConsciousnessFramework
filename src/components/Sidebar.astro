@@ -1,0 +1,131 @@
+---
+const navGroups = [
+  {
+    label: 'Getting Started',
+    items: [
+      { label: 'Introduction', href: '/docs/introduction' },
+      { label: 'Quick Start', href: '/docs/quick-start' },
+      { label: 'Installation', href: '/docs/installation' },
+    ],
+  },
+  {
+    label: 'Framework',
+    items: [
+      { label: 'Overview', href: '/docs/framework/overview' },
+      { label: 'Core Principles', href: '/docs/framework/core-principles' },
+      { label: 'Coherence Model', href: '/docs/framework/coherence-model' },
+      { label: 'Consciousness Layers', href: '/docs/framework/consciousness-layers' },
+    ],
+  },
+  {
+    label: 'Philosophy',
+    items: [
+      { label: 'Foundations', href: '/docs/philosophy/foundations' },
+      { label: 'Systems Theory', href: '/docs/philosophy/systems-theory' },
+      { label: 'Emergence & Complexity', href: '/docs/philosophy/emergence' },
+    ],
+  },
+  {
+    label: 'Applications',
+    items: [
+      { label: 'Organizational Design', href: '/docs/applications/organizational-design' },
+      { label: 'Decision Systems', href: '/docs/applications/decision-systems' },
+      { label: 'Knowledge Architectures', href: '/docs/applications/knowledge-architectures' },
+    ],
+  },
+  {
+    label: 'Reference',
+    items: [
+      { label: 'Glossary', href: '/docs/reference/glossary' },
+      { label: 'Contributing', href: '/docs/reference/contributing' },
+      { label: 'Changelog', href: '/docs/reference/changelog' },
+    ],
+  },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="sidebar-nav" aria-label="Documentation navigation">
+  <div class="sidebar-brand">
+    <span>Documentation</span>
+  </div>
+
+  {navGroups.map((group) => (
+    <div class="nav-group">
+      <p class="nav-group-label">{group.label}</p>
+      <ul class="nav-list">
+        {group.items.map((item) => (
+          <li>
+            <a
+              href={item.href}
+              class:list={['nav-link', { active: currentPath === item.href }]}
+              aria-current={currentPath === item.href ? 'page' : undefined}
+            >
+              {item.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  ))}
+</nav>
+
+<style>
+  .sidebar-nav {
+    padding: 0 0.75rem;
+  }
+
+  .sidebar-brand {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-accent);
+    padding: 0 0.75rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    margin-bottom: 1rem;
+  }
+
+  .nav-group {
+    margin-bottom: 1.5rem;
+  }
+
+  .nav-group-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-muted);
+    padding: 0 0.75rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-link {
+    display: block;
+    padding: 0.35rem 0.75rem;
+    font-size: 0.875rem;
+    color: var(--color-muted);
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
+    text-decoration: none;
+  }
+
+  .nav-link:hover {
+    color: var(--color-text);
+    background: rgba(56, 189, 248, 0.06);
+    text-decoration: none;
+  }
+
+  .nav-link.active {
+    color: var(--color-accent);
+    background: rgba(56, 189, 248, 0.1);
+    font-weight: 600;
+  }
+</style>

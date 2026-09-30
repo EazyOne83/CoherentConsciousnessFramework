@@ -1,0 +1,85 @@
+---
+layout: ../../layouts/DocsLayout.astro
+title: Installation
+description: Detailed installation and configuration guide for the Coherent Consciousness Framework site.
+---
+
+## Installation
+
+Full installation reference for developers and contributors.
+
+## System Requirements
+
+| Requirement | Version |
+|---|---|
+| Node.js | ≥ 18.0.0 |
+| npm | ≥ 9.0.0 |
+| Git | any recent version |
+
+## Step-by-Step Setup
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/yourusername/coherentconsciousnessframework.git
+cd coherentconsciousnessframework
+```
+
+### 2. Install Dependencies
+
+```bash
+npm install
+```
+
+This installs:
+- `astro` — the core framework
+- `@astrojs/mdx` — MDX integration for component-enhanced Markdown
+- `@astrojs/sitemap` — automatic sitemap generation
+
+### 3. Environment Configuration
+
+No `.env` file is required for local development. For deployment, set:
+
+```bash
+# Optional — overrides the site URL for sitemap generation
+SITE_URL=https://coherentsystems.institute
+```
+
+### 4. Run the Dev Server
+
+```bash
+npm run dev
+# → http://localhost:4321
+```
+
+## Integrations Reference
+
+### MDX
+
+MDX is configured in `astro.config.mjs`. It allows you to use Astro components directly inside `.mdx` files:
+
+```mdx
+---
+layout: ../../layouts/DocsLayout.astro
+title: My Page
+---
+
+import MyComponent from '../../components/MyComponent.astro';
+
+<MyComponent label="Hello" />
+
+## Regular markdown still works
+```
+
+### Sitemap
+
+The sitemap integration auto-generates `/sitemap-index.xml` and `/sitemap-0.xml` on build. No configuration needed — it picks up all pages automatically.
+
+## Deployment
+
+The output is a **static site** (`dist/`). Deploy to any static host:
+
+- **Vercel**: `vercel --prod`
+- **Netlify**: drag-and-drop `dist/` or connect via Git
+- **Cloudflare Pages**: connect the repo, build command `npm run build`, output dir `dist`
+- **GitHub Pages**: use the `astro` GitHub Action from the official docs
