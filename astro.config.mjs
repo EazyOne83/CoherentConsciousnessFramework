@@ -4,9 +4,10 @@ import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
   site: 'https://coherentsystems.institute',
-  integrations: [
+  trailingSlash: 'ignore'
+  ,integrations: [
     mdx(),
-    sitemap(),
+//   sitemap(),
   ],
   markdown: {
     shikiConfig: {
