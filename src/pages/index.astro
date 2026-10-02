@@ -1,150 +1,99 @@
 ---
-import '../styles/global.css';
-import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
 ---
 
-<!DOCTYPE html>
----
----
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <title>Coherent Systems Research Institute</title>
-  </head>
-  <body>
-    <h1>Coherent Systems Research Institute</h1>
-    <p>Advancing integrative information consciousness theory.</p>
+<Layout title="Coherent Systems Research Institute">
+  <section style="padding: 4rem 2rem; max-width: 900px; margin: 0 auto;">
+    <h1 style="font-size: 2.8rem; margin-bottom: 0.5rem;">
+      Coherent Systems Research Institute
+    </h1>
 
-    <nav>
-      <ul>
-        <li><a href="/docs/introduction">Introduction</a></li>
-        <li><a href="/docs/framework/overview">Framework Overview</a></li>
-        <li><a href="/docs/philosophy/foundations">Philosophy</a></li>
-        <li><a href="/docs/applications/decision-systems">Applications</a></li>
-        <li><a href="/docs/reference/glossary">Glossary</a></li>
-      </ul>
-    </nav>
-  </body>
-</html>
+    <h2 style="font-size: 1.4rem; font-weight: 400; margin-bottom: 2rem;">
+      Advancing the Science of Consciousness Through Information Dynamics
+    </h2>
 
-<style>
-  body { overflow-x: hidden; }
+    <p style="font-size: 1.15rem; line-height: 1.7;">
+      Consciousness is not a static property or a neural location. It is a 
+      <strong>dynamic, information-driven process</strong> that moves through stability, 
+      dissolution, and integration. The 
+      <strong>Coherent Consciousness Framework (CCF)</strong> provides a formal model of 
+      this process — uniting nonlinear dynamics, information geometry, and empirical 
+      measurement into a single coherent theory.
+    </p>
 
-  .hero-section {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 3rem;
-    min-height: 100vh;
-    padding: 8rem 6rem 4rem;
-    position: relative;
-    overflow: hidden;
-  }
+    <p style="font-size: 1.15rem; line-height: 1.7; margin-top: 1rem;">
+      CCF offers a mathematically grounded, experimentally testable approach to understanding:
+    </p>
 
-  .hero-glow {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 700px;
-    height: 700px;
-    background: radial-gradient(circle, rgba(56,189,248,0.06) 0%, transparent 70%);
-    pointer-events: none;
-  }
+    <ul style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">
+      <li>collapse and fragmentation</li>
+      <li>breakthrough and transformation</li>
+      <li>reintegration and coherence</li>
+      <li>emergent conscious behavior in humans, artificial systems, and collectives</li>
+    </ul>
 
-  .hero-content { max-width: 520px; position: relative; z-index: 1; }
+    <hr style="margin: 3rem 0;">
 
-  .hero-eyebrow {
-    font-size: 0.75rem;
-    font-weight: 600;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: var(--color-accent);
-    margin-bottom: 1rem;
-  }
+    <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">A New Foundation for Consciousness Science</h3>
 
-  .hero-title {
-    font-size: clamp(2.8rem, 5vw, 4rem);
-    font-weight: 800;
-    line-height: 1.1;
-    color: var(--color-heading);
-    margin: 0 0 1.5rem;
-    letter-spacing: -0.02em;
-  }
+    <p style="font-size: 1.15rem; line-height: 1.7;">
+      CCF reframes consciousness as a structured flow through an information-geometric 
+      manifold. This perspective reveals the underlying principles that govern:
+    </p>
 
-  .hero-accent { color: var(--color-accent); }
+    <ul style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">
+      <li>stability and somatic grounding</li>
+      <li>dissolution and exploratory destabilization</li>
+      <li>integration and the emergence of higher-order states</li>
+    </ul>
 
-  .hero-description {
-    font-size: 1.1rem;
-    color: var(--color-muted);
-    line-height: 1.7;
-    margin-bottom: 2.5rem;
-  }
+    <p style="font-size: 1.15rem; line-height: 1.7; margin-top: 1rem;">
+      These dynamics appear across psychology, neuroscience, AI, organizational systems, 
+      and collective intelligence — yet until now, no unified model has explained them.
+      <strong>CCF provides that unification.</strong>
+    </p>
 
-  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+    <hr style="margin: 3rem 0;">
 
-  .btn-primary {
-    display: inline-block;
-    background: var(--color-accent);
-    color: #0a0e1a;
-    font-weight: 700;
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--radius);
-    text-decoration: none;
-    transition: background 0.2s, transform 0.1s;
-    font-size: 0.95rem;
-  }
-  .btn-primary:hover { background: #7dd3fc; transform: translateY(-1px); text-decoration: none; color: #0a0e1a; }
+    <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Explore the Framework</h3>
 
-  .btn-ghost {
-    display: inline-block;
-    border: 1px solid var(--color-border);
-    color: var(--color-text);
-    font-weight: 500;
-    padding: 0.75rem 1.5rem;
-    border-radius: var(--radius);
-    text-decoration: none;
-    transition: border-color 0.2s, color 0.2s;
-    font-size: 0.95rem;
-  }
-  .btn-ghost:hover { border-color: var(--color-accent); color: var(--color-accent); text-decoration: none; }
+    <ul style="font-size: 1.1rem; line-height: 1.7;">
+      <li><a href="/docs/introduction">Introduction</a> — why the framework exists</li>
+      <li><a href="/docs/framework/overview">Framework Overview</a> — the full architecture</li>
+      <li><a href="/docs/framework/core-principles">Core Principles</a> — the governing rules of coherence</li>
+    </ul>
 
-  .hero-diagram { width: 320px; flex-shrink: 0; opacity: 0.8; }
+    <ul style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">
+      <li><a href="/docs/framework/coherence-model">Coherence Model</a></li>
+      <li><a href="/docs/framework/consciousness-layers">Consciousness Layers</a></li>
+      <li><a href="/docs/framework/gamma-synergy">Synergy Coefficient γ</a></li>
+    </ul>
 
-  .features-section {
-    padding: 4rem 6rem 6rem;
-    border-top: 1px solid var(--color-border);
-  }
+    <hr style="margin: 3rem 0;">
 
-  .features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 1.5rem;
-  }
+    <h3 style="font-size: 1.6rem; margin-bottom: 1rem;">Research, Application, and Development</h3>
 
-  .feature-card {
-    background: var(--color-surface);
-    border: 1px solid var(--color-border);
-    border-radius: var(--radius);
-    padding: 1.5rem;
-    transition: border-color 0.2s;
-  }
-  .feature-card:hover { border-color: var(--color-accent-dim); }
+    <p style="font-size: 1.15rem; line-height: 1.7;">
+      The Coherent Systems Research Institute develops:
+    </p>
 
-  .feature-icon {
-    font-size: 1.4rem;
-    color: var(--color-accent);
-    margin-bottom: 0.75rem;
-    font-family: var(--font-mono);
-  }
+    <ul style="font-size: 1.1rem; line-height: 1.7; margin-top: 1rem;">
+      <li>formal models of conscious dynamics</li>
+      <li>computational simulations</li>
+      <li>empirical measurement tools</li>
+      <li>applied frameworks for psychology, AI, and organizational systems</li>
+    </ul>
 
-  .feature-card h3 { font-size: 1rem; margin-top: 0; margin-bottom: 0.5rem; }
-  .feature-card p { font-size: 0.875rem; color: var(--color-muted); margin: 0; }
+    <p style="font-size: 1.15rem; line-height: 1.7; margin-top: 1rem;">
+      Our mission is to advance a rigorous, integrative science of consciousness — one 
+      capable of explaining transformation, coherence, and emergent intelligence across 
+      all scales.
+    </p>
 
-  @media (max-width: 900px) {
-    .hero-section { flex-direction: column; padding: 6rem 2rem 3rem; text-align: center; }
-    .hero-actions { justify-content: center; }
-    .hero-diagram { width: 220px; }
-    .features-section { padding: 3rem 2rem; }
-  }
-</style>
+    <hr style="margin: 3rem 0;">
+
+    <p style="font-size: 1.2rem; font-weight: 500;">
+      Begin your exploration with the <a href="/docs/introduction">Introduction</a>.
+    </p>
+  </section>
+</Layout>
