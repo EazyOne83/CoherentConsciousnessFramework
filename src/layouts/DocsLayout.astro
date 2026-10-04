@@ -1,105 +1,56 @@
 ---
-import '../styles/global.css';
-import Sidebar from '../components/Sidebar.astro';
-import Header from '../components/Header.astro';
-import TableOfContents from '../components/TableOfContents.astro';
-
-export interface Props {
-  title: string;
-  description?: string;
-  headings?: { depth: number; slug: string; text: string }[];
-}
-
-const { title, description = 'Coherent Consciousness Framework Documentation', headings = [] } = Astro.props;
+layout: ../../../layouts/DocsLayout.astro
+title: Organizational Design
+description: Applying the CCF to organizational design and institutional architecture.
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
-      rel="stylesheet"
-    />
-    <title>{title} — Coherent Systems Research Institute</title>
-  </head>
-  <body>
-    <Header />
+## Organizational Design
 
-    <div class="docs-shell">
-      <aside class="docs-sidebar">
-        <Sidebar />
-      </aside>
+The CCF provides a rigorous basis for organizational design — one that goes beyond structure charts and process maps to address the coherence conditions that make organizations functional over time.
 
-      <main class="docs-main" id="main-content">
-        <article class="docs-content">
-          <h1>{title}</h1>
-          <slot />
-        </article>
-      </main>
+## Design for Coherence, Not Control
 
-      {headings.length > 0 && (
-        <aside class="docs-toc">
-          <TableOfContents headings={headings} />
-        </aside>
-      )}
-    </div>
-  </body>
-</html>
+Traditional organizational design optimizes for **control**: clear hierarchies, defined roles, measurable outputs. The CCF reframes this as designing for **coherence conditions**:
 
-<style>
-  .docs-shell {
-    display: grid;
-    grid-template-columns: var(--sidebar-width) 1fr 200px;
-    min-height: calc(100vh - var(--header-height));
-    margin-top: var(--header-height);
-  }
+- What feedback channels exist so the organization can sense its own state?
+- What shared sensemaking practices exist at each layer?
+- How is alignment maintained without suppressing productive tension?
 
-  .docs-sidebar {
-    position: sticky;
-    top: var(--header-height);
-    height: calc(100vh - var(--header-height));
-    overflow-y: auto;
-    border-right: 1px solid var(--color-border);
-    background: var(--color-surface);
-    padding: 1.5rem 0;
-  }
+## The Four-Layer Diagnostic
 
-  .docs-main {
-    min-width: 0;
-    padding: 2.5rem 3rem;
-    max-width: 780px;
-  }
+Apply the CCF layers as an organizational diagnostic:
 
-  .docs-content {
-    width: 100%;
-  }
+### L1 — Do individuals have coherent self-models within the institution?
 
-  .docs-toc {
-    position: sticky;
-    top: calc(var(--header-height) + 2rem);
-    height: fit-content;
-    padding: 1.5rem 1rem;
-    font-size: 0.85rem;
-  }
+Signs of L1 incoherence in organizations:
+- Employees cannot articulate how their work connects to organizational purpose
+- High ambiguity about what constitutes good performance
+- Attention systematically captured by urgency over importance
 
-  @media (max-width: 1200px) {
-    .docs-shell {
-      grid-template-columns: var(--sidebar-width) 1fr;
-    }
-    .docs-toc { display: none; }
-  }
+### L2 — Are working relationships characterized by mutual modeling depth?
 
-  @media (max-width: 768px) {
-    .docs-shell {
-      grid-template-columns: 1fr;
-    }
-    .docs-sidebar { display: none; }
-    .docs-main { padding: 1.5rem; }
-  }
-</style>
+Signs of L2 incoherence:
+- Repeated miscommunication between the same parties
+- Positions harden in conflict rather than being treated as information
+- Collaboration is asymmetric — one party consistently models the other less
+
+### L3 — Does the team have a shared model of its own process?
+
+Signs of L3 incoherence:
+- Teams cannot describe *how* they make decisions, only *what* they decided
+- Retrospectives produce the same insights repeatedly without behavioral change
+- Knowledge is siloed rather than commons-held
+
+### L4 — Do formal structures and informal norms align?
+
+Signs of L4 incoherence:
+- Stated values and promoted behaviors diverge
+- Policy exists that no one follows — and everyone knows it
+- Turnover destroys institutional knowledge rather than triggering renewal
+
+## Design Principles
+
+1. **Make feedback visible** — design explicit channels for coherence signals at each layer
+2. **Create sensemaking rituals** — structured practices at L2 and L3 that periodically re-align shared interpretation
+3. **Audit policy-culture alignment** — annually or after major change events
+4. **Protect generative tension** — resist pressure to resolve all disagreement; preserve productive ambiguity
