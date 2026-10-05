@@ -1,18 +1,9 @@
 ---
-import DocsSidebar from '../components/DocsSidebar.astro';
-import DocsHeader from '../components/DocsHeader.astro';
 ---
-
 <html lang="en">
   <body>
-    <DocsHeader />
-
-    <div style="display: flex; flex-direction: row;">
-      <DocsSidebar />
-
-      <main style="padding: 2rem; width: 100%;">
-        <slot />
-      </main>
-    </div>
+    <main>
+      <slot />
+    </main>
   </body>
 </html>
